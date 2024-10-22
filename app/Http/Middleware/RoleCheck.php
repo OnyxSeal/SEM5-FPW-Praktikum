@@ -22,6 +22,6 @@ class RoleCheck
             }
         }
         Auth::logout();
-        return redirect()->route('login')->with('status', 'Kamu impostor.');
+        return redirect()->route('login')->with('status', 'You are an impostor.');
     }
 }

@@ -38,6 +38,9 @@
                         <x-dropdown-link :href="route('tambah-barang')">
                            Product Master
                         </x-dropdown-link>
+                        <x-dropdown-link :href="route('tambah-supplier')">
+                           Supplier Master
+                        </x-dropdown-link>
 
                     </x-slot>
                 </x-dropdown>

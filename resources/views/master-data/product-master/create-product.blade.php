@@ -1,3 +1,10 @@
+<style>
+    .john{
+        margin-top: 25px;
+        background-color: black !important;
+    }
+</style>
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
@@ -52,7 +59,7 @@
                                 <input type="text" id="producer" name="producer" class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                             </div>
                
-                            <button type="submit" class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-black-600 border rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                            <button type="submit" class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-black-600 border rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 john">Submit</button>
                         </form>
                     </div>
                

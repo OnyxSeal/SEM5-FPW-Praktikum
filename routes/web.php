@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SupplierController;
+
+Route::get('/supplier/create', [SupplierController::class, 'create'])->name("tambah-supplier");
+Route::post('/supplier', [SupplierController::class, 'store'])->name("supplier-store");
 
 
 Route::get('/product/create', [ProductController::class, 'create'])->name("tambah-barang");
