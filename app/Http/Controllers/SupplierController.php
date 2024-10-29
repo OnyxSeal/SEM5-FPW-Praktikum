@@ -11,7 +11,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
+        $data = Supplier::all();
+        return view("master-data.product-master.supplier-index", compact('data'));
     }
 
     /**

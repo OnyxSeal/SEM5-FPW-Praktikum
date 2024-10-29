@@ -41,6 +41,12 @@
                         <x-dropdown-link :href="route('tambah-supplier')">
                            Supplier Master
                         </x-dropdown-link>
+                        <x-dropdown-link :href="route('product-index')">
+                           Product Index
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('supplier-index')">
+                           Supplier Index
+                        </x-dropdown-link>
 
                     </x-slot>
                 </x-dropdown>
