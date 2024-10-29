@@ -8,6 +8,8 @@ use App\Http\Controllers\SupplierController;
 
 Route::get('/supplier', [SupplierController::class, 'index'])->name("supplier-index");
 Route::get('/supplier/create', [SupplierController::class, 'create'])->name("tambah-supplier");
+Route::get('/supplier/{id}/edit', [SupplierController::class, 'edit'])->name("supplier-edit");
+Route::put('/supplier/{id}', [SupplierController::class, 'update'])->name("supplier-update");
 Route::post('/supplier', [SupplierController::class, 'store'])->name("supplier-store");
 
 

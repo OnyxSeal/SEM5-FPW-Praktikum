@@ -1,5 +1,5 @@
 <style>
-    .totoijo{
+    .greenbtn{
         background-color: green;
         height: auto;
         margin-bottom: 10px;
@@ -21,7 +21,7 @@
   <div class="container p-4 mx-auto">
     <div class="overflow-x-auto">
       <a href="{{ route('tambah-supplier')}}">
-        <button class="px-6 py-4 text-white bg-green-500 border border-green-500 rounded-lg shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 totoijo">
+        <button class="px-6 py-4 text-white bg-green-500 border border-green-500 rounded-lg shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 greenbtn">
             Add supplier data
         </button>
     </a>
@@ -42,13 +42,13 @@
          
           @foreach ($data as $item)
             <tr class="bg-white">
-              <td class="px-4 py-2 border border-gray-200">1</td>
+              <td class="px-4 py-2 border border-gray-200">{{ $item->id }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->supplier_name }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->supplier_address }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->phone }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->comment }}</td>
               <td class="px-4 py-2 border border-gray-200">
-                <a href="{{ route('product-edit', $item->id) }}" class="px-2 text-blue-600 hover:text-blue-800"><i class="fa-solid fa-pencil"></i></a>
+                <a href="{{ route('supplier-edit', $item->id) }}" class="px-2 text-blue-600 hover:text-blue-800"><i class="fa-solid fa-pencil"></i></a>
                 <button class="px-2 text-red-600 hover:text-red-800" onclick="confirmDelete(1)"><i class="fa-solid fa-trash-can"></i></button>
               </td>
             </tr>

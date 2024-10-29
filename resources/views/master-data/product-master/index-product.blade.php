@@ -42,7 +42,7 @@
          
           @foreach ($data as $item)
             <tr class="bg-white">
-              <td class="px-4 py-2 border border-gray-200">1</td>
+              <td class="px-4 py-2 border border-gray-200">{{ $item->id }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->product_name }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->unit }}</td>
               <td class="px-4 py-2 border border-gray-200">{{ $item->type }}</td>

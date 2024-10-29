@@ -50,7 +50,8 @@ class SupplierController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $supplier = Supplier::findOrFail($id);
+        return view('master-data.product-master.edit-supplier', compact('supplier'));
     }
 
     /**
@@ -58,7 +59,20 @@ class SupplierController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'supplier_name' => 'required|string|max:255',
+            'supplier_address' => 'required|string|max:100',
+            'phone' => 'required|string|max:15',
+            'comment' => 'required|string',
+        ]);
+
+        $product = Supplier::findOrFail($id);
+        $product->update([
+            'supplier_name' => $request->supplier_name,
+            'supplier_address' => $request->supplier_address,
+            'phone' => $request->phone,
+            'comment' => $request->comment,
+        ]);
     }
 
     /**
