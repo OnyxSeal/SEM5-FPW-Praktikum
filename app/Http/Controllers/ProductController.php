@@ -2,17 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ProductsExport;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Maatwebsite\Excel\Facades\Excel;
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
+    public function exportExcel(){
+        return Excel::download(new ProductsExport, 'product.xlsx');
+    }
+
     public function index()
     {
-        $data = Product::all();
-        return view("master-data.product-master.index-product", compact('data'));
+        $product = Product::all();
+        return view("master-data.product-master.index-product", compact('product'));
     }
 
     /**
@@ -20,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("master-data.product-master.create-product");
+        return 'Method Create Jalan!';
     }
 
     /**
@@ -47,7 +54,8 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('master-data.product-master.detail-product', compact('product'));
     }
 
     /**
