@@ -35,4 +35,4 @@ Laravel adalah perangkat lunak sumber terbuka yang dilisensikan di bawah [MIT Li
 
 ---
 
-Terima kasih telah mengikuti progress praktikum Laravel saya ini!
+Terima kasih telah mengikuti progress praktikum Laravel Saya!
