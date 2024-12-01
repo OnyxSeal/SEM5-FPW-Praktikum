@@ -74,6 +74,19 @@
                     <input type="text" id="producer" name="producer" value="{{ old('producer', $product->producer) }}" required class="w-full p-2 mt-2 border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
                 </div>
 
+                <div class="form-group">
+                    <label for="supplier" class="block text-sm font-medium text-gray-700">Supplier</label>
+                    <select name="supplier_id" id="supplier" class="mt-1 block w-full rounded-mt border border-gray-300 p-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" required>
+                        <option value="" disabled {{ old('supplier_id', $product->supplier_id) ? '' : 'selected' }}>Pilih Supplier</option>
+                        @foreach ($suppliers as $supplier)
+                            <option value="{{ $supplier->id }}" {{ $product->supplier_id == $supplier->id ? 'selected' : '' }}>
+                                {{ $supplier->supplier_name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+
 
                 <div class="flex justify-end">
                     <button type="submit" class="john px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-500">Update Product</button>

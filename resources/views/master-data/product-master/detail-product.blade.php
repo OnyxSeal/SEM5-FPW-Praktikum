@@ -9,7 +9,6 @@
         <div class="overflow-x-auto rounded-lg bg-white p-6 shadow-md">
             <!-- Back button -->
             <a href="{{ route('product-index') }}" class="text-blue-500 hover:underline">&larr; Back</a>
-
             <div class="mt-4">
                 <h3 class="mb-4 text-2xl font-semibold">{{ $product->product_name }}</h3>
                 <p><strong>ID:</strong> {{ $product->id }}</p>
@@ -18,6 +17,7 @@
                 <p><strong>Information:</strong> {{ $product->information }}</p>
                 <p><strong>Quantity:</strong> {{ $product->qty }}</p>
                 <p><strong>Producer:</strong> {{ $product->producer }}</p>
+                <p><strong>Supplier:</strong> {{ $product->supplier->supplier_name ?? 'Gada Suppliernya' }}</p>
             </div>
         </div>
     </div>
